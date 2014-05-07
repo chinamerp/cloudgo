@@ -18,3 +18,10 @@
     // 最后加一行: Acquire::CompressionTypes::Order "gz";
     sudo echo "" >> "Acquire::CompressionTypes::Order 'gz';" /etc/apt/apt.conf.d/00aptitude
     
+# 调整虚拟机分辨率 #
+    xrandr
+    cvt 1366 768
+    sudo xrandr --newmode {cvt结果}
+    sudo xrandr --addmode VBOX0  "1360x768_60.00"
+    sudo xrandr --output VBOX0  "1360x768_60.00"
+    
